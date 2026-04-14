@@ -37,7 +37,7 @@ async function discoverRecipes() {
   setLoading(true)
   setRecipes(null)
   try {
-    const response = await fetch('https://fridge2food-ai.onrender.com', {
+    const response = await fetch('https://fridge2food-ai.onrender.com/api/recipe', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ ingredients: ingredients.join(', ') })
